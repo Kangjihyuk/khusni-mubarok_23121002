@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GiziKu - Asisten Gizi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">GiziKu</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li>Home</li>
+    <li>Chatbot</li>
+    <li>Artikel</li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- HEADER / HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Asisten Informasi Gizi Digital</h1>
+    <p>
+      GiziKu adalah platform edukasi gizi berbasis web yang membantu
+      kamu memahami nutrisi, gizi seimbang, dan pola makan sehat
+      melalui chatbot interaktif.
+    </p>
+    <button class="hero-btn" id="startChat">Mulai Chat</button>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+  <section class="info">
+    <h2>Tentang GiziKu</h2>
+    <p>
+      Website GiziKu dirancang untuk memberikan informasi gizi yang mudah dipahami
+      dan dapat diakses oleh semua kalangan. Dengan bantuan chatbot, pengguna
+      dapat bertanya langsung mengenai gizi, kesehatan, dan nutrisi harian.
+    </p>
+  </section>
+
+  <!-- CHATBOT -->
+  <section class="chatbox" id="chatbot">
+    <header class="chat-header">Chat GiziKu</header>
+
+    <div id="chatMessages" class="chat-messages">
+      <div class="bot">Halo 👋 Aku GiziKu. Tanyakan apa saja tentang gizi!</div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="Tanyakan seputar gizi...">
+      <button id="sendBtn">Kirim</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
