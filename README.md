@@ -1,10 +1,33 @@
+
 📘 GiziKu Chatbot Web Application
-GiziKu merupakan sebuah aplikasi website chatbot berbasis HTML, CSS, dan JavaScript yang berfungsi sebagai asisten informasi gizi. Aplikasi ini dirancang untuk membantu pengguna memahami berbagai hal yang berkaitan dengan gizi, nutrisi, dan pola makan sehat melalui interaksi chatbot yang sederhana namun informatif. Chatbot pada website ini terhubung dengan sistem backend otomatis menggunakan n8n Webhook, sehingga mampu memproses pertanyaan dan memberikan jawaban secara real-time.
-Secara tampilan, GiziKu mengusung desain modern dengan dominasi warna biru yang melambangkan kesehatan, kepercayaan, dan profesionalitas. Website ini dibuat responsif agar dapat digunakan dengan nyaman baik pada perangkat desktop maupun perangkat mobile. Navigasi website dilengkapi dengan navbar yang responsif dan hamburger menu pada ukuran layar kecil, sehingga pengalaman pengguna tetap optimal.
-Tujuan utama dari pengembangan aplikasi GiziKu adalah untuk memberikan edukasi gizi secara digital dengan cara yang mudah diakses dan dipahami oleh berbagai kalangan. Aplikasi ini juga menjadi sarana pembelajaran dalam penerapan konsep frontend web development serta integrasi sistem otomatis menggunakan workflow automation. Dengan adanya chatbot, pengguna dapat berinteraksi langsung tanpa harus mencari informasi secara manual.
-Dalam proses pengembangannya, aplikasi ini menggunakan teknologi HTML5 untuk membangun struktur halaman, CSS3 untuk mengatur tampilan antarmuka, layout responsif, serta animasi, dan JavaScript sebagai logika utama dalam pengelolaan interaksi pengguna dan komunikasi dengan backend. Integrasi dengan n8n dilakukan melalui mekanisme webhook yang menerima data pertanyaan dari pengguna dan mengembalikan jawaban dalam bentuk JSON.
-Struktur folder aplikasi dibuat sederhana agar mudah dipahami dan dikelola. Seluruh tampilan utama berada pada file index.html, styling pada file style.css, dan logika aplikasi serta integrasi chatbot berada pada file script.js. Pendekatan ini memudahkan proses pengembangan, pengujian, maupun pemeliharaan aplikasi.
-Alur kerja aplikasi dimulai ketika pengguna membuka website GiziKu melalui browser. Setelah halaman utama ditampilkan, pengguna dapat langsung berinteraksi dengan chatbot dengan mengetikkan pertanyaan seputar gizi pada kolom input yang tersedia. Pertanyaan tersebut kemudian dikirim oleh JavaScript ke n8n Webhook menggunakan metode HTTP POST. Selanjutnya, n8n memproses pertanyaan melalui workflow yang telah dirancang dan mengirimkan kembali jawaban dalam format JSON. Data yang diterima oleh website kemudian dibersihkan dari format markdown dan ditampilkan sebagai balasan chatbot pada antarmuka pengguna.
-Pengujian aplikasi dilakukan untuk memastikan seluruh fitur berjalan dengan baik. Pengujian fungsional menunjukkan bahwa proses pengiriman pesan, penerimaan respons dari n8n, serta penampilan balasan chatbot dapat berjalan sesuai harapan. Pengujian responsif juga dilakukan pada berbagai ukuran layar, termasuk desktop dan perangkat mobile, untuk memastikan tampilan tetap rapi dan mudah digunakan. Selain itu, pengujian error dilakukan untuk menangani kondisi seperti webhook tidak aktif, input kosong, atau respons server yang tidak sesuai.
-Untuk memudahkan proses debugging, aplikasi ini dilengkapi dengan logging pada browser console. Informasi seperti pesan yang dikirim ke server, status HTTP, data JSON yang diterima, serta error yang terjadi dapat dipantau langsung oleh pengembang. Hal ini sangat membantu dalam proses pengembangan dan perbaikan aplikasi.
-Secara keseluruhan, aplikasi GiziKu merupakan sebuah website chatbot yang sederhana namun fungsional dan relevan. Aplikasi ini tidak hanya bermanfaat sebagai media edukasi gizi, tetapi juga sebagai contoh implementasi frontend web development yang terintegrasi dengan sistem otomatis berbasis workflow. Ke depannya, aplikasi ini masih dapat dikembangkan lebih lanjut dengan penambahan fitur seperti animasi chatbot, penyimpanan riwayat percakapan, mode gelap, maupun integrasi kecerdasan buatan yang lebih kompleks.
+
+🔄 Flow Aplikasi GiziKu
+
+1. Pengguna membuka website GiziKu melalui browser pada perangkat desktop atau mobile.
+
+2. Sistem menampilkan halaman utama yang terdiri dari navbar responsif, header (hero section), serta area chatbot dengan tampilan modern dan tema warna biru.
+
+3. Pengguna mengetikkan pertanyaan seputar gizi, nutrisi, atau pola makan sehat ke dalam kolom input chatbot.
+
+4. Setelah tombol kirim ditekan atau tombol Enter digunakan, JavaScript mengambil teks pertanyaan dari input pengguna.
+
+5. JavaScript mengirimkan data pertanyaan tersebut ke backend menggunakan metode HTTP POST dalam format JSON.
+
+6. Data JSON dikirim ke endpoint n8n Webhook yang telah dikonfigurasi sebelumnya.
+
+7. n8n menerima data dari webhook dan memprosesnya melalui workflow yang telah dibuat, seperti pemrosesan teks, logika tertentu, atau integrasi dengan sistem AI.
+
+8. Setelah proses selesai, n8n mengirimkan hasil jawaban kembali ke website dalam bentuk response JSON.
+
+9. Website menerima response JSON dari n8n dan melakukan validasi data.
+
+10. Sistem membersihkan format markdown seperti tanda bintang atau bullet agar teks jawaban tampil rapi.
+
+11. Jawaban chatbot yang telah diproses ditampilkan pada area chat sebagai balasan dari bot.
+
+12. Seluruh proses pengiriman dan penerimaan data dicatat pada browser console untuk keperluan debugging.
+
+13. Jika terjadi error seperti webhook tidak aktif atau response gagal diterima, sistem akan menampilkan pesan error kepada pengguna.
+
+14. Pengguna dapat melanjutkan percakapan dengan mengirimkan pertanyaan berikutnya.
+Flow ini menggambarkan alur kerja aplikasi GiziKu secara menyeluruh, mulai dari interaksi pengguna di sisi frontend hingga pemrosesan data di backend n8n dan penampilan hasil secara real-time.
